@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .form-box {
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+            width: 400px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        label {
+            width: 45%;
+            font-size: 14px;
+        }
+
+        input {
+            width: 50%;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<h2>Enter Transaction Details</h2>
+
+<form action="/submit" method="POST">
+
+    <label>Step:</label>
+    <input type="number" name="step" required><br><br>
+
+    <label>Type:</label>
+    <input type="number" name="type" required><br><br>
+
+    <label>Amount:</label>
+    <input type="float" name="amount" required><br><br>
+
+    <label>Old Balance Origin:</label>
+    <input type="float" name="oldbalanceOrg" required><br><br>
+
+    <label>New Balance Origin:</label>
+    <input type="float" name="newbalanceOrig" required><br><br>
+
+    <label>Old Balance Destination:</label>
+    <input type="float" name="oldbalanceDest" required><br><br>
+
+    <label>New Balance Destination:</label>
+    <input type="float" name="newbalanceDest" required><br><br>
+
+    <!-- 🔹 ADD THIS BELOW OTHER INPUTS -->
+    <label>Is Flagged Fraud (0 or 1):</label>
+    <input type="number" name="isFlaggedFraud" required><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
